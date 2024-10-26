@@ -1,0 +1,13 @@
+<h1>Cart</h1>
+<% @cart.cart_items.each do |item| %>
+  <div>
+    <h3><%= item.product.name %></h3>
+    <p>Quantity: <%= item.quantity %></p>
+    <%= button_to '+', cart_cart_item_path(@cart, item), method: :put, params: { cart_item: { quantity: item.quantity + 1 } } %>
+    <%= button_to '-', cart_cart_item_path(@cart, item), method: :put, params: { cart_item: { quantity: item.quantity - 1 } } %>
+    <%= button_to 'Remove', cart_cart_item_path(@cart, item), method: :delete %>
+  </div>
+<% end %>
+<%= button_to 'Empty Cart', cart_path(@cart), method: :delete, data: { confirm: 'Are you sure?' } %>
+<h3>Total: $<%= @cart.total_price %></h3>
+<%= link_to 'Home', products_path %>
