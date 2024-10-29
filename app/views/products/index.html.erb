@@ -1,12 +1,16 @@
-<h1>Welcome to RegisterApp: It is time to buy!</h1>
-
-<h2>See out products available: </h2>
-
-<% @products.each do |product| %>
-  <div>
-    <h2><%= product.name %></h2>
-    <p>Price: $<%= product.price %></p>
-    <%= button_to 'Add to Cart', cart_cart_items_path(current_cart, product_id: product.id), method: :post %>
-  </div>
-<% end %>
-<%= link_to 'Go to Cart', cart_path(current_cart) %>
+<div class="container product-container ">
+    <head>
+        <h1>Welcome to RegisterApp: It is time to buy!</h1>
+        <h2>See our products available:</h2>
+    </head>
+    <body>
+        <% @products.each do |product| %>
+            <div class="product-item">
+                <h2><%= product.name %></h2>
+                <p>Price: $<%= product.price %></p>
+                <%= button_to 'Add to Cart', cart_cart_items_path(current_cart, product_id: product.id), method: :post, class: 'btn btn-primary' %>
+            </div>
+        <% end %>
+        <%= link_to 'Go to Cart', cart_path(current_cart), class: 'btn btn-secondary' %>
+    </body>
+</div>
