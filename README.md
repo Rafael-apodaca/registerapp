@@ -1,6 +1,6 @@
 # README
 
-CashRegisterApp is a simple and efficient cash register application built with Ruby on Rails for the backend and the frontend. 
+RegisterApp is a simple and efficient cash register application built with Ruby on Rails for the backend and the frontend. 
 
 The app features adding products to a cart and computing the total price. 
 
