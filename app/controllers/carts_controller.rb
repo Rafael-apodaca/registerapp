@@ -17,7 +17,7 @@ class CartsController < ApplicationController
     @cart.cart_items.destroy_all
     redirect_to products_path, notice: 'Cart has been emptied.'
   end
-  
+
   private
 
   def cart_params
