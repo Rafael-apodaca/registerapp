@@ -6,11 +6,9 @@ The app features adding products to a cart and computing the total price.
 
 Features: 
 
-Products Page: Displays a list of available products adn prices respectively (Green Tea (GR1): €3.11; Strawberry (SR1): €5.00; Coffee (CF1): €11.23)
-Each product has a button to add it to the cart.
-Cart Page: Shows all the products added to the cart along with the total price. The cart includes:
-A button to empty the cart.
-A button to return to the products page.
+Products Page: Displays a list of available products and prices respectively (Green Tea (GR1): €3.11; Strawberry (SR1): €5.00; Coffee (CF1): €11.23)
+
+Cart Page: Shows all the products added to the cart along with the total price.
 
 Special Conditions
  - Buy One Get One Free: If 2 Green Teas are purchased, one is free.
